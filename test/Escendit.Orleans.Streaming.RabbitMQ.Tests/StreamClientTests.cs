@@ -38,9 +38,9 @@ public class StreamClientTests
             {
                 new DnsEndPoint("localhost", 5552),
             },
-            UserName = "test",
-            Password = "test",
-            VirtualHost = "testing",
+            UserName = "guest",
+            Password = "guest",
+            VirtualHost = "/",
         });
 
         var confirmationCount = 0;

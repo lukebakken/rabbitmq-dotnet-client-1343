@@ -21,18 +21,18 @@ public class RabbitMqClientConfigurator : IClientBuilderConfigurator
             .WithStream(options =>
             {
                 options.Endpoints.Add(new RabbitEndpoint { HostName = "localhost", Port = 5552 });
-                options.UserName = "test";
-                options.Password = "test";
-                options.VirtualHost = "testing";
+                options.UserName = "guest";
+                options.Password = "guest";
+                options.VirtualHost = "/";
                 options.ClientProvidedName = "Client-Stream";
             })*/
             .AddRabbitMqStreaming("Queue")
             .WithQueue(options =>
             {
                 options.Endpoints.Add(new RabbitEndpoint { HostName = "localhost", Port = 5672 });
-                options.UserName = "test";
-                options.Password = "test";
-                options.VirtualHost = "testing";
+                options.UserName = "guest";
+                options.Password = "guest";
+                options.VirtualHost = "/";
                 options.ClientProvidedName = "Client-Queue";
             });
     }

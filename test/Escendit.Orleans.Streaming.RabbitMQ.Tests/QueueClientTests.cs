@@ -24,9 +24,9 @@ public class QueueClientTests
         {
             HostName = "localhost",
             Port = 5672,
-            VirtualHost = "testing",
-            UserName = "test",
-            Password = "test",
+            VirtualHost = "/",
+            UserName = "guest",
+            Password = "guest",
         };
 
         var connection = connectionFactory.CreateConnection();
